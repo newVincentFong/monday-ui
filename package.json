@@ -1,0 +1,31 @@
+{
+  "name": "monday-ui",
+  "version": "1.0.0",
+  "description": "React components of Monday.com's project management application",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "just-scripts build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newVincentFong/monday-ui.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "mondaycom"
+  ],
+  "author": "vincent-fong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newVincentFong/monday-ui/issues"
+  },
+  "homepage": "https://github.com/newVincentFong/monday-ui#readme",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "just-scripts": "^1.2.1"
+  }
+}
