@@ -26,6 +26,11 @@
     
   },
   "devDependencies": {
-    "just-scripts": "^1.2.1"
+    "@types/react": "^16.9.54",
+    "just-scripts": "^1.2.2",
+    "react": "^17.0.1",
+    "ts-loader": "^8.0.7",
+    "typescript": "^4.0.5",
+    "webpack": "^5.3.0"
   }
 }

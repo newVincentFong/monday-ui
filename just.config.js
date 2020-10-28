@@ -1,5 +1,5 @@
-const { task, logger } = require('just-scripts');
+const { task, logger, series, webpackTask } = require('just-scripts');
 
-task('build', function() {
-  logger.info('do some webpack');
-});
+task('webpack', webpackTask())
+
+task('build', series('webpack'));
