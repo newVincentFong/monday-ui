@@ -36,6 +36,8 @@
     "@types/react": "^16.9.54",
     "babel-loader": "^8.1.0",
     "just-scripts": "^1.2.2",
+    "monday-ui-react-core": "0.0.10",
+    "monday-ui-style": "0.0.9",
     "react": "^16.14.0",
     "react-is": "^17.0.1",
     "ts-loader": "^8.0.7",
