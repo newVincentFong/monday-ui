@@ -1,7 +1,7 @@
-const { webpackMerge, webpackConfig, tsOverlay, stylesOverlay } = require('just-scripts')
+import { webpackMerge, webpackConfig, tsOverlay, stylesOverlay } from 'just-scripts'
 
 const config = webpackMerge(
-    webpackConfig(),
+    webpackConfig({}),
     stylesOverlay(),
     {
         mode: 'production',
@@ -34,4 +34,4 @@ const config = webpackMerge(
         }
     })
 
-module.exports = config
+export default config
