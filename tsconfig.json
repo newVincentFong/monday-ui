@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
       "baseUrl": ".",
-      "outDir": "lib",
+      "outDir": "lib-es2015",
       "target": "es5",
       "module": "commonjs",
       "jsx": "react",
       "declaration": true,
+      "declarationDir": "lib-es2015",
       "sourceMap": true,
       "experimentalDecorators": true,
       "importHelpers": true,

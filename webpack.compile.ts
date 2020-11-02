@@ -2,6 +2,7 @@ import { Configuration, Entry, RuleSetUse } from 'webpack'
 import { webpackMerge, tsOverlay } from 'just-scripts'
 import fs from 'fs'
 import path from 'path'
+import CssExtractPlugin from 'mini-css-extract-plugin'
 
 function getComponentEntrys(): Entry {
     const entry = {}
@@ -15,18 +16,18 @@ const baseConfig: Configuration = {
     mode: 'none',
     entry: getComponentEntrys(),
     output: {
-        filename: '[name].tsx',
+        filename: '[name].js',
         path: __dirname + '/lib-es2015',
         library: '[name]',
         libraryTarget: 'var'
     },
     externals: {
-        react: 'react'
+        react: 'React'
     }
 }
 
 const lessUse: RuleSetUse = [
-    { loader: 'style-loader' },
+    CssExtractPlugin.loader,
     { loader: 'css-loader' },
     { loader: 'less-loader', options: {
         lessOptions: { strictMath: true },
@@ -37,6 +38,9 @@ module.exports = webpackMerge(
     baseConfig,
     tsOverlay(),
     {
-        module: { rules: [{ test: /\.less$/, use: lessUse }] }
+        module: { rules: [{ test: /\.less$/, use: lessUse }] },
+        plugins: [new CssExtractPlugin({
+            insert: ''
+        })]
     } as Configuration
 )
