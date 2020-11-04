@@ -22,6 +22,6 @@
       "typeRoots": ["../../node_modules/@types", "../../typings"],
       "types": ["jest", "webpack-env"]
     },
-    "include": ["src"]
+    "include": ["src/components"]
   }
   
