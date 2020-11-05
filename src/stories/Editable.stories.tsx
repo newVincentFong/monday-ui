@@ -8,6 +8,10 @@ export default {
     component: Editable
 } as Meta
 
-const Template: Story = () => <Editable />
+const Template: Story = () => (
+    <div style={{width: '100px'}}>
+        <Editable text={'点击我可以编辑噢'} />
+    </div>
+)
 
 export const Default = Template.bind({})
