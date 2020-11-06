@@ -1,3 +1,5 @@
+@import "../../styles/colors/grey-shades.less";
+
 .editable {
     &-component {
         min-width: 0;
@@ -6,7 +8,7 @@
         .suggesting {
             cursor: text;
             border: 1px dashed;
-            border-color: #c5c7d0;
+            border-color: @wolf;
         }
     }
     &-text {
@@ -21,10 +23,9 @@
     }
     
     &-input {
-        border: 1px dashed #c5c7d0;
+        border: 1px dashed @wolf;
         display: inline;
         outline: none;
         background-color: #ffffff;
     }
-    
 }
