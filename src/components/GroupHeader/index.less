@@ -1,0 +1,46 @@
+@import "../../styles/colors/main-system.less";
+@import "../../styles/colors/grey-shades.less";
+@import "../../styles//mixins/flex.less";
+
+.mon-group-header {
+    &-component {
+        display: flex;
+        position: relative;
+        .mon-column {
+            &-header {
+                position: relative;
+                min-width: 0px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+                color: @dark;
+                min-height: 40px;
+                padding: 10px 0 0;
+                border-right: 1px solid;
+                border-right-color: @white;
+                flex-grow: 0;
+                flex-shrink: 0;
+                &-inner {
+                    .flex-center();
+                    margin: 0 5px;
+                }
+                &-element-wrapper {
+                    width: 20px;
+                }
+            }
+            &-title {
+                &-wrapper {
+                    width: 100%;
+                    .flex-center();
+                    flex-direction: row;
+                }
+                cursor: text;
+                &:not(.renaming-column) {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
