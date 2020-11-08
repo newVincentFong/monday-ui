@@ -8,9 +8,10 @@ const PREFIX = CSS_PREFIX + COMPONENT_NAME
 
 interface EditableProps {
     text: string
+    onEdit?: (editing: boolean) => void
 }
 
-export const Editable: FC<EditableProps> = ({text}) => {
+export const Editable: FC<EditableProps> = ({text, onEdit}) => {
     const [content, setContent] = useState(text)
     const [suggesting, setSuggesting] = useState(false)
     const [editing, setEditing] = useState(false)
@@ -23,14 +24,14 @@ export const Editable: FC<EditableProps> = ({text}) => {
                 <div className={classNames(`${PREFIX}-text`, suggesting ? `suggesting` : '')}
                     onMouseEnter={() => {setSuggesting(true)}}
                     onMouseLeave={() => {setSuggesting(false)}}>
-                    <span onClick={() => {setEditing(true)}}>{content}</span>
+                    <span onClick={() => {setEditing(true); onEdit(true)}}>{content}</span>
                 </div>
             ) :
             (
                 <input className={classNames(`${PREFIX}-input`)}
                     type="text"
                     value={content}
-                    onBlur={() => {setEditing(false); setSuggesting(false)}}
+                    onBlur={() => {setEditing(false); setSuggesting(false); onEdit(false)}}
                     onChange={e => {setContent(e.currentTarget.value)}}
                     autoFocus />
             )

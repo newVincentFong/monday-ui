@@ -1,9 +1,11 @@
 @import "../../styles/colors/main-system.less";
 @import "../../styles/colors/grey-shades.less";
 @import "../../styles//mixins/flex.less";
+@import "../../styles//mixins/reset.less";
 
 .mon-group-header {
     &-component {
+        .reset();
         display: flex;
         position: relative;
         .mon-column {
@@ -26,6 +28,25 @@
                 }
                 &-element-wrapper {
                     width: 20px;
+                }
+                &:hover, &.resizing, &.menu-open, &.column-resize-mode, &.column-drag-mode {
+                    background-color: @riverstone;
+                }
+                .drag-handle {
+                    cursor: move;
+                    width: 0px;
+                    display: none;
+                    flex: 0 0 auto;
+                }
+                &:hover:not(.renaming-column):not(.column-resize-mode),
+                &.resizing:not(.renaming-column):not(.column-resize-mode),
+                &.menu-open:not(.renaming-column):not(.column-resize-mode),
+                &.column-resize-mode:not(.renaming-column):not(.column-resize-mode),
+                &.column-drag-mode:not(.renaming-column):not(.column-resize-mode) {
+                    .drag-handle {
+                        display: block;
+                        width: 20px;
+                    }
                 }
             }
             &-title {
