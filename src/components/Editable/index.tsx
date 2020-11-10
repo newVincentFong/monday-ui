@@ -11,7 +11,7 @@ interface EditableProps {
     onEdit?: (editing: boolean) => void
 }
 
-export const Editable: FC<EditableProps> = ({text, onEdit}) => {
+export const Editable: FC<EditableProps> = ({text, onEdit = () => {}}) => {
     const [content, setContent] = useState(text)
     const [suggesting, setSuggesting] = useState(false)
     const [editing, setEditing] = useState(false)
@@ -28,7 +28,7 @@ export const Editable: FC<EditableProps> = ({text, onEdit}) => {
                 </div>
             ) :
             (
-                <input className={classNames(`${PREFIX}-input`)}
+                <input className={classNames(`${PREFIX}-input`, `${PREFIX}-input-text-align`)}
                     type="text"
                     value={content}
                     onBlur={() => {setEditing(false); setSuggesting(false); onEdit(false)}}
