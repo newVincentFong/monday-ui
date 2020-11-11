@@ -2,7 +2,6 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { GroupHeader } from '../components/GroupHeader'
-import { Editable } from '../components/Editable'
 
 export default {
     title: 'MondayUI/GroupHeader',
