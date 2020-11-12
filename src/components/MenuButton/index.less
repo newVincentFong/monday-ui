@@ -1,0 +1,22 @@
+@import "../../styles/colors/grey-shades.less";
+@import "../../styles/colors/main-system.less";
+@import "../../styles/mixins/flex.less";
+
+.mon-menu-button {
+    border-radius: 4px;
+    .flex-center();
+    cursor: pointer;
+    background-color: @ui-grey;
+    &-component {
+
+    }
+    &:hover {
+        background-color: #e5f4ff !important;
+        color: @primary;
+    }
+    &-xs {
+        width: 16px;
+        height: 16px;
+        font-size: 14px;
+    }
+}

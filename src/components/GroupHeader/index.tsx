@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { CSS_PREFIX } from '../../util/constants'
 import Drag from 'monday-ui-react-core/dist/icons/Drag'
 import { Editable } from '../Editable'
+import { MenuButton } from '../MenuButton'
 
 const COMPONENT_NAME = 'group-header'
 const PREFIX = CSS_PREFIX + COMPONENT_NAME
@@ -43,7 +44,11 @@ export const GroupHeader: FC<GroupHeaderProps> = ({columns}) => {
                         </div>
                         <div className={`${COLUMN_PREFIX}-header-element-wrapper`}>
                         {
-                            hoverIndex === i ? RightElement : ''
+                            hoverIndex === i ? (
+                                <div className={`${COLUMN_PREFIX}-menu`}>
+                                    <MenuButton size="xs" />
+                                </div>
+                            ) : ''
                         }
                         </div>
                     </div>
