@@ -12,9 +12,11 @@ interface MenuButtonProps {
 }
 
 export const MenuButton: FC<MenuButtonProps> = ({size = 'xs'}) => {
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
-        <div className={`${PREFIX}-component`}>
-            <div className={classNames(`${PREFIX}-button`, `${PREFIX}-button-${size}`)}>
+        <div className={`${PREFIX}-component`} onClick={() => {setIsOpen(!isOpen)}}>
+            <div className={classNames(`${PREFIX}`, `${PREFIX}-${size}`, isOpen ? 'open' : '')}>
                 <DropdownChevronDown />
             </div>
         </div>
