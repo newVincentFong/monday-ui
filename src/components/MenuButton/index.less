@@ -23,3 +23,102 @@
         font-size: 14px;
     }
 }
+.mon-menu {
+    &-dialog {
+        pointer-events: all;
+        display: flex;
+        position: relative;
+        left: -105px;
+        top: 75px;
+        border-radius: 8px;
+        background-color: @white;
+        // background-color: var(--dialog-background-color);
+        color: @dark;
+        // color: var(--primary-text-color);
+        box-shadow: 0 4px 17px 6px rgba(0, 0, 0, 0.1);
+        &:not(.column-settings-menu) {
+            min-width: 224px;
+        }
+    }
+    &-inner {
+        overflow: auto;
+        min-width: 0;
+        order: 1;
+        transition: all 50ms ease-in;
+        transition-property: opacity, width;
+    }
+    &-section {
+        padding: 8px;
+        &:not(:last-child) {
+            border-bottom: 1px solid;
+            border-bottom-color: @ui-grey;
+            // border-bottom-color: var(--card-border-color);
+        }
+    }
+    &-item {
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        cursor: pointer;
+        color: @dark;
+        // color: var(--primary-text-color);
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0px;
+        white-space: nowrap;
+        border-radius: 4px;
+        text-decoration: none;
+        &:not(.disabled) {
+            &:hover, &:active {
+                color: #323338;
+                // color: var(--primary-text-color);
+                background-color: #e6e9ef;
+                // background-color: var(--primary-background-hover-color);
+            }
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &-icon {
+        flex: 0 0 16px;
+        margin-right: 8px;
+        color: #676879;
+        // color: var(--icon-color);
+        text-align: center;
+        width: 16px;
+        .flex-center();
+    }
+    &-title {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: start;
+    }
+}
+
+.mon-menu {
+    &-xs {
+        width: 220px;
+    }
+    &-md {
+        width: 264px;
+        .mon-menu-inner {
+            width: 264px;
+        }
+    }
+    &-lg {
+        width: 280px;
+    }
+    &-xl {
+        width: 320px;
+    }
+    &-xxl {
+        width: 400px;
+    }
+    &-xxxl {
+        width: 480px;
+    }
+}
