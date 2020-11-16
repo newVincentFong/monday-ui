@@ -1,5 +1,6 @@
 @import "../../styles/colors/main-system.less";
 @import "../../styles/colors/grey-shades.less";
+@import "../../styles/colors/group-color-coding.less";
 @import "../../styles//mixins/flex.less";
 @import "../../styles//mixins/reset.less";
 
@@ -34,7 +35,7 @@
                 &-element-wrapper {
                     width: 20px;
                     .mon-menu-button:not(:hover) {
-                        background-color: #ffffff !important;
+                        background-color: @riverstone !important;
                     }
                 }
                 &:hover, &.resizing, &.menu-open, &.column-resize-mode, &.column-drag-mode {
@@ -54,6 +55,74 @@
                     .drag-handle {
                         display: block;
                         width: 20px;
+                    }
+                }
+                .sort-by-column {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -18px;
+                    padding: 5px;
+                    z-index: 1000;
+                    // buttons
+                    .mon {
+                        &-sort-button, &-clear-button, &-save-button {
+                            position: relative;
+                            display: block;
+                            color: @blackish;
+                            background-color: white;
+                            box-shadow: 0px 1px 8px 1px rgba(51, 51, 51, 0.16);
+                            height: 20px;
+                            cursor: pointer;
+                            transition: background-color 0.1s ease, transform 0.2s ease, opacity 0.2s ease;
+                            &:not(.button-disabled):hover {
+                                background-color: #0085ff;
+                                // background-color: var(--primary-color);
+                                color: white;
+                            }
+                        }
+                        &-save-button, &-clear-button {
+                            border-radius: 12px;
+                            padding: 1px 8px;
+                            font-size: 12px;
+                            visibility: hidden;
+                        }
+                        &-sort-button {
+                            transform: rotate(0deg);
+                            width: 20px;
+                            border-radius: 10px;
+                            svg {
+                                vertical-align: baseline;
+                            }
+                        }
+                        &-save-button-wrapper, &-clear-button-wrapper {
+                            position: absolute;
+                        }
+                        &-save-button-wrapper {
+                            left: 7px;
+                        }
+                        &-clear-button-wrapper {
+                            left: -18px;
+                        }
+                    }
+                    &.sorted {
+                        .mon {
+                            &-sort-button {
+                                background-color: #0085ff;
+                                // background-color: var(--primary-color);
+                                color: white;
+                                transform: rotate(360deg);
+                                transition: all 0.1s ease-in-out;
+                            }
+                            &-clear-button {
+                                transform: translateX(-20px);
+                                visibility: visible;
+                            }
+                            &-save-button {
+                                transform: translateX(20px);
+                                visibility: visible;
+                            }
+                        }
                     }
                 }
             }
