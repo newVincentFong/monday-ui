@@ -7,9 +7,9 @@ import Settings from 'monday-ui-react-core/dist/icons/Settings'
 import Sort from 'monday-ui-react-core/dist/icons/Sort'
 import Info from 'monday-ui-react-core/dist/icons/Info'
 
-const COMPONENT_NAME = 'menu-button'
+const COMPONENT_NAME = '-menu-button'
 const PREFIX = CSS_PREFIX + COMPONENT_NAME
-const MENU_PREFIX = CSS_PREFIX + 'menu'
+const MENU_PREFIX = CSS_PREFIX + '-menu'
 
 interface MenuButtonProps {
     size: 'lg' | 'md' | 'smd' | 'sm' | 'xs' | undefined

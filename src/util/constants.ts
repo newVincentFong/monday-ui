@@ -1,1 +1,1 @@
-export const CSS_PREFIX: string = 'mon-'
+export const CSS_PREFIX: string = 'mon'

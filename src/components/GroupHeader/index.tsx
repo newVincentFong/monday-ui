@@ -7,9 +7,9 @@ import Sort from 'monday-ui-react-core/dist/icons/Sort'
 import { Editable } from '../Editable'
 import { MenuButton } from '../MenuButton'
 
-const COMPONENT_NAME = 'group-header'
+const COMPONENT_NAME = '-group-header'
 const PREFIX = CSS_PREFIX + COMPONENT_NAME
-const COLUMN_PREFIX = CSS_PREFIX + 'column'
+const COLUMN_PREFIX = CSS_PREFIX + '-column'
 
 interface Column {
     LeftElement?: React.ReactNode
@@ -56,13 +56,13 @@ export const GroupHeader: FC<GroupHeaderProps> = ({columns}) => {
                         {
                             hoverIndex === i || sortedIndex === i ? (
                                 <div className={classNames('sort-by-column', sortedIndex === i ? 'sorted' : '')} onClick={() => {setSortedIndex(sortedIndex === i ? -1 : i)}}>
-                                    <span className={`${CSS_PREFIX}clear-button-wrapper`}>
-                                        <span className={`${CSS_PREFIX}clear-button`}>clear</span>
+                                    <span className={`${CSS_PREFIX}-clear-button-wrapper`}>
+                                        <span className={`${CSS_PREFIX}-clear-button`}>clear</span>
                                     </span>
-                                    <span className={`${CSS_PREFIX}save-button-wrapper`}>
-                                        <span className={`${CSS_PREFIX}save-button`}>save</span>
+                                    <span className={`${CSS_PREFIX}-save-button-wrapper`}>
+                                        <span className={`${CSS_PREFIX}-save-button`}>save</span>
                                     </span>
-                                    <span className={`${CSS_PREFIX}sort-button`}>
+                                    <span className={`${CSS_PREFIX}-sort-button`}>
                                         <Sort size={12} />
                                     </span>
                                 </div>
