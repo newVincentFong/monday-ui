@@ -1,0 +1,36 @@
+@import "../../styles/colors/grey-shades.less";
+
+.mon-collapse-group-toggle {
+    &-component {
+        color: #666666;
+        background: #e1e1e1;
+        font-size: 13px;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        line-height: 19px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &:hover {
+            background: #d1d1d1;
+        }
+        .arrow {
+            position: absolute;
+            height: 13px;
+            width: 100%;
+            left: 0;
+            &.top {
+                top: 7px;
+                transition: top 0.198s;
+            }
+            &.bottom {
+                bottom: 6px;
+                transition: bottom 0.198s;
+            }
+        }
+    }
+}

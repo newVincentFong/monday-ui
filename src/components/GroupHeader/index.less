@@ -140,5 +140,60 @@
                 }
             }
         }
+        .mon-name-column {
+            &-header {
+                position: relative;
+                min-height: 40px;
+                text-align: left;
+                font-size: 18px;
+                background-color: #ffffff;
+                // background-color: var(--primary-background-color);
+                flex: 1 0 308px;
+                min-width: 0px;
+                display: flex;
+                align-items: center;
+                padding-bottom: 1px;
+                z-index: 1;
+                &-inner {
+                    min-width: 0px;
+                    width: 100%;
+                    display: flex;
+                }
+                .group-name {
+                    position: relative;
+                    transition: margin-left 0.1s ease;
+                    &:not(.renaming-column) {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+                .collapse-group-button {
+                    position: absolute;
+                    display: none;
+                    align-self: center;
+                }
+                .drag-handle {
+                    cursor: move;
+                    position: absolute;
+                    display: none;
+                    top: 12px;
+                    left: 20px;
+                    font-size: 13px;
+                    color: #c4c4c4;
+                }
+                &:hover {
+                    .collapse-group-button {
+                        display: inline-block;
+                    }
+                    .group-name {
+                        margin-left: 36px;
+                    }
+                    .drag-handle {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
     }
 }
