@@ -125,6 +125,27 @@
                         }
                     }
                 }
+                .resize-column {
+                    cursor: ew-resize;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                    right: 0px;
+                    width: 4px;
+                    transition: background 0.1s ease;
+                    background-color: #ffffff;
+                    // background-color: var(--primary-background-color);
+                }
+                &:hover {
+                    .resize-column {
+                        background: @riverstone;
+                        // background: var(--primary-background-color)
+                        &:hover {
+                            background: @primary;
+                            // background: var(--primary-color);
+                        }
+                    }
+                }
             }
             &-title {
                 &-wrapper {

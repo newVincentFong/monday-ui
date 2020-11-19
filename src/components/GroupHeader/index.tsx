@@ -90,6 +90,11 @@ export const GroupHeader: FC<GroupHeaderProps> = ({nameColumn = undefined, colum
                                 </div>
                             ) : ''
                         }
+                        {
+                            hoverIndex === i ? (
+                                <div className="resize-column"></div>
+                            ) : ''
+                        }
                     </div>
                 </div>
             ))
