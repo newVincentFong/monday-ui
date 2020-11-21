@@ -17,7 +17,7 @@ export const Editable: FC<EditableProps> = ({text, onEdit = () => {}}) => {
     const [editing, setEditing] = useState(false)
 
     return (
-        <div className={classNames(`${PREFIX}-component`)}>
+        <div className={`${PREFIX}-component`}>
         {
             !editing ? 
             (

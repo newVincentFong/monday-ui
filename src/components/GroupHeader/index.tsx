@@ -33,7 +33,7 @@ export const GroupHeader: FC<GroupHeaderProps> = ({nameColumn = undefined, colum
     const [sortedIndex, setSortedIndex] = useState(-1)
 
     return (
-        <div className={classNames(`${PREFIX}-component`)}>
+        <div className={`${PREFIX}-component`}>
         {
             nameColumn ? (
                 <div className={`${CSS_PREFIX}-name-column-header`} style={{color: nameColumn.style.color, flexBasis: nameColumn.style.flexBasis || '300px'}}>
