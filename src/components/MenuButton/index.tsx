@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import './index.less'
 import classNames from 'classnames'
-import { CSS_PREFIX } from '../../util/constants'
+import { CSS_PREFIX } from '../@util/constants'
 import DropdownChevronDown from 'monday-ui-react-core/dist/icons/DropdownChevronDown'
 import Settings from 'monday-ui-react-core/dist/icons/Settings'
 import Sort from 'monday-ui-react-core/dist/icons/Sort'
