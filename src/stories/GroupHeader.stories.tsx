@@ -15,7 +15,7 @@ const columns = [
 ]
 
 const Template: Story = () => (
-    <div  style={{height: '40px'}}>
+    <div style={{height: '40px', maxWidth: '500px'}}>
         <GroupHeader nameColumn={{style: {color: 'rgb(3, 127, 76)', flexBasis: 100}, name: 'Phase1'}} columns={columns} />
     </div>
 )
