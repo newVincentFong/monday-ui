@@ -1,13 +1,19 @@
 @import "../../styles/mixins/flex.less";
+@import "../../styles/mixins/reset.less";
 
 .mon-pulse {
     &-component {
+        .reset();
         display: flex;
         border-bottom: 1px solid;
         border-bottom-color: #ffffff;
         // border-bottom-color: var(--primary-background-color);
         &.can-edit {
             cursor: pointer;
+        }
+        &-wrapper {
+            background-color: #f5f6f8;
+            // background-color: var(--pulse-background-color);
         }
     }
 }

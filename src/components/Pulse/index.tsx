@@ -10,14 +10,16 @@ const PREFIX = CSS_PREFIX + COMPONET_NAME
 interface PulseProps {
     nameCell: {
         style: CSSProperties,
-        name: string
+        value: string
     }
 }
 
 export const Pulse = (props: PulseProps) => {
     return (
         <div className={`${PREFIX}-component`} style={{height: '36px', lineHeight: '36px'}}>
-            <Cell type={CellType.name} {...props.nameCell}></Cell>
+            <Cell type={CellType.NAME} {...props.nameCell}></Cell>
+            <Cell type={CellType.MULTIPLE_PERSON} value={{src: 'https://cdn1.monday.com/dapulse_default_photo.png'}} style={{flexBasis: '100px'}}></Cell>
+            <Cell type={CellType.MULTIPLE_PERSON} value="" style={{flexBasis: '100px'}}></Cell>
         </div>
     )
 }

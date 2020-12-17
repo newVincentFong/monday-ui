@@ -1,5 +1,7 @@
+@import "../../styles/mixins/reset.less";
 .mon-cell {
     &-component{
+        .reset();
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -21,7 +23,11 @@
         &.double-item-height > * {
             height: 80px;
         }
-        .mon-name-cell {
+        &.navigation-focus {
+            background-color: #e5f4ff;
+            background-color: var(--primary-selected-color);
+        }
+        &.name-cell {
             flex: 1 0 308px;
             will-change: transform;
             height: 100%;
@@ -33,6 +39,13 @@
             border-bottom: 1px solid;
             border-bottom-color: #e6e9ef;
             // border-bottom-color: var(--layout-border-color);
+        }
+        &:hover {
+            cursor: pointer;
+            .mon-name-cell-text:not(.is-editing) {
+                color: #1f76c2;
+                // color: var(--link-color);
+            }
         }
     }
 }
@@ -56,5 +69,42 @@
         // color: var(--primary-text-color);
         font-weight: 400;
         font-size: 13px;
+    }
+}
+.mon-multiple-person-cell {
+    &-component {
+        position: relative;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > * {
+            margin: 0 -4px;
+        }
+        &:hover {
+            .add-btn {
+                display: block;
+            }
+        }
+        .add-btn {
+            display: none;
+            transform: translateX(-3px);
+            color: white;
+            z-index: 1;
+            font-size: 14px;
+            margin: 0 -6px;
+            background: #0085ff;
+            // background: var(--primary-color);
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            position: relative;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
     }
 }
