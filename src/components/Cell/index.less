@@ -46,6 +46,29 @@
                 color: #1f76c2;
                 // color: var(--link-color);
             }
+            .clear-btn {
+                display: flex;
+            }
+        }
+        .clear-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            width: 12px;
+            height: 12px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            background: #c4c4c4;
+            color: #f5f6f8;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                background: #777777;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -105,6 +128,9 @@
                 top: 0;
                 left: 0;
             }
+        }
+        .clear-btn {
+            right: 2px;
         }
     }
 }

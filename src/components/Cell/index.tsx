@@ -5,6 +5,7 @@ import { CSS_PREFIX, CellType, CellClassname } from '../@util/constants'
 import { Editable } from '../Editable'
 import { PersonBullet } from '../PersonBullet'
 import Add from 'monday-ui-react-core/dist/icons/AddSmall'
+import CloseSmall from 'monday-ui-react-core/dist/icons/CloseSmall'
 
 const COMPONENT_NAME = '-cell'
 const PREFIX = CSS_PREFIX + COMPONENT_NAME
@@ -26,6 +27,7 @@ export const Cell = (props: CellProps) => {
                     return (
                         <div>
                             <MultiplePersonCell value={props.value}></MultiplePersonCell>
+                            <CloseSmall className="clear-btn" />
                         </div>
                     )
             }
