@@ -5,7 +5,8 @@ import { CSS_PREFIX, CellType, CellClassname } from '../@util/constants'
 import { Editable } from '../Editable'
 import { PersonBullet } from '../PersonBullet'
 import { Text } from '../Text'
-import Add from 'monday-ui-react-core/dist/icons/AddSmall'
+import Add from 'monday-ui-react-core/dist/icons/Add'
+import AddSmall from 'monday-ui-react-core/dist/icons/AddSmall'
 import CloseSmall from 'monday-ui-react-core/dist/icons/CloseSmall'
 import { arr2rgb } from '../@util/formats'
 
@@ -61,7 +62,7 @@ export const MultiplePersonCell = (props: {
 }) => {
     return (
         <div className={`${MULTIPLE_PERSON_PREFIX}-component`}>
-            <Add className="add-btn" size={50} />
+            <AddSmall className="add-btn" size={50} />
             <PersonBullet src={props.value.src} />
         </div>
     )
@@ -79,6 +80,12 @@ export const StatusCell = (props: {
     }
     return (
         <div className={`${STATUS_PREFIX}-component`} style={style}>
+            <div className="status-note-wrapper">
+                <div className="status-print-color">
+                    <div className="add-status-note"></div>
+                    <Add className="fa-plus" size={12} style={{color: arr2rgb(rgb)}}/> 
+                </div>
+            </div>
             <Text>{props.value.text}</Text>
         </div>
     )

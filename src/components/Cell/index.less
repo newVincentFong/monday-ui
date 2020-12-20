@@ -147,9 +147,48 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        .mon-text-component {
-            border: 0;
-            padding: 0;
+        &:hover {
+            opacity: 0.7;
+            .status-note-wrapper:not(:hover) {
+                .status-note {
+                    border-width: 0 12px 12px 0;
+                }
+                .add-status-note {
+                    border-width: 0 10px 10px 0;
+                }
+            }
+        }
+    }
+}
+.status-note-wrapper {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 12px;
+    z-index: 1;
+    .add-status-note {
+        transition: border-width 0.3s 0.2s ease;
+        position: absolute;
+        top: 0;
+        right: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.2) #fff;
+        border-width: 0;
+    }
+    .fa-plus {
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 8px;
+    }
+    &:hover, &.add-status-note-open {
+        .status-note, .add-status-note {
+            transition: border-width 0.3s ease;
+            border-width: 0 18px 18px 0;
+        }
+        .fa-plus {
+            display: block;
         }
     }
 }
