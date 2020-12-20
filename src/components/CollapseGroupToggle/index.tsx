@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC, useState } from 'react'
+import React, { FC } from 'react'
 import './index.less'
 import classNames from 'classnames'
 import { CSS_PREFIX } from '../@util/constants'

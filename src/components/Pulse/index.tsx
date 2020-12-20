@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC } from 'react'
+import React, { CSSProperties } from 'react'
 import './index.less'
 import { CSS_PREFIX } from '../@util/constants'
 import { Cell } from '../Cell'

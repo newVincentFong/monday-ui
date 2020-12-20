@@ -76,7 +76,7 @@ export const StatusCell = (props: {
     const rgb = props.value.rgb || []
     const style: React.CSSProperties = {
         backgroundColor: arr2rgb(rgb),
-        borderBottomColor: arr2rgb(rgb.map(i => (i > 20) ? i - 20 : 0))
+        borderBottomColor: arr2rgb(rgb.map((i: any) => (i > 20) ? i - 20 : 0))
     }
     return (
         <div className={`${STATUS_PREFIX}-component`} style={style}>
