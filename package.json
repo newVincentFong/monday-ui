@@ -28,8 +28,10 @@
   "dependencies": {
     "ahooks": "^2.9.1",
     "classnames": "^2.2.6",
+    "dayjs": "^1.10.3",
     "monday-ui-react-core": "0.0.15",
-    "monday-ui-style": "0.0.13"
+    "monday-ui-style": "0.0.13",
+    "react-day-picker": "^7.4.8"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
