@@ -9,7 +9,7 @@ export default {
 } as Meta
 
 const Template: Story = () => (
-    <div>
+    <div style={{width: '150px'}}>
         <DatePicker />
     </div>
 )

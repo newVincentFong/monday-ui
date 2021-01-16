@@ -1,6 +1,32 @@
 @import "../../styles/mixins/reset.less";
+@import "../../styles/colors/grey-shades.less";
+
 .mon-date-picker {
     &-component {
-        .reset()
+        .reset();
+        width: 100%;
+        height: 100%;
+        input {
+            border: 0;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+            color: #666666;
+            line-height: 26px;
+            text-align: center;
+            caret-color: transparent;
+            padding: 1px;
+            &:hover {
+                padding: 0;
+                cursor: text;
+                border: 1px dashed;
+                border-color: @wolf;
+            }
+            &[type='text'] {
+                text-align:center;
+            }
+        }
+        .DayPickerInput-OverlayWrapper {
+            margin-top: 4px;
+        }
     }
 }
