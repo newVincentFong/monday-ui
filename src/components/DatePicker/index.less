@@ -28,5 +28,24 @@
         .DayPickerInput-OverlayWrapper {
             margin-top: 4px;
         }
+        .DayPicker-Day {
+            color: @mud;
+            font-weight: 300;
+            border: none;
+        }
+        .DayPicker-Day--today {
+            border: 1px solid #0085ff;
+            display: inline-block;
+        }
+        .DayPicker-Weekday abbr[title] {
+            font-weight: 300;
+        }
+        .DayPicker:not(.DayPicker--interactionDisabled) {
+            .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside) {
+                &:hover {
+                    background-color: @ui-grey;
+                }
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, useState } from 'react'
 import './index.less'
 import { CSS_PREFIX } from '../@util/constants'
 import DayPickerInput from 'react-day-picker/DayPickerInput'
@@ -12,25 +12,25 @@ function formatDate(date: Date) {
     return dayjs(date).format('MMM D, YYYY')
 }
 
-const TODAY_STYLE: CSSProperties = {
-    border: '2px solid #0085ff',
-    color: '#0085ff',
-    borderRadius: '50% !important'
-}
 const SELECTED_STYLE: CSSProperties = {
     color: '#fffff',
     background: '#0085ff'
 }
 
 export const DatePicker = () => {
+    const [selectedDate, setSelectedDate] = useState(new Date())
+
     return (
         <div className={`${PREFIX}-component`}>
             <DayPickerInput
                 dayPickerProps={{
+                    selectedDays: selectedDate,
                     modifiersStyles: {
-                        today: TODAY_STYLE,
                         selected: SELECTED_STYLE
                     }
+                }}
+                onDayChange={(date) => {
+                    setSelectedDate(date)
                 }}
                 formatDate={formatDate}
                 placeholder={formatDate(new Date())} />
