@@ -1,0 +1,40 @@
+.mon-dialog {
+    &-component {}
+    &-content {
+        pointer-events: all;
+        position: relative;
+        border: 1px solid #cacac9;
+        background-color: #ffffff;
+        // background-color: var(--primary-background-color);
+        padding: 10px;
+        &-wrapper {
+            position: relative;
+        }
+        &::before, &::after {
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        &::before {
+            border-color: rgba(169, 169, 169, 0);
+            border-bottom-color: #cacac9;
+            border-width: 11px;
+            top: -12px;
+            right: auto;
+            left: 13px;
+            margin-top: -11px;
+        }
+        &::after {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #fdfdfd;
+            border-width: 10px;
+            top: -10px;
+            right: auto;
+            left: 14px;
+            margin-top: -10px;
+        }
+    }
+}

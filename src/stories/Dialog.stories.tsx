@@ -2,6 +2,7 @@ import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { Dialog } from '../components/Dialog'
+import { Editable } from '../components/Editable'
 
 export default {
     title: 'MondayUI/Dialog',
@@ -10,7 +11,7 @@ export default {
 
 const Template: Story = () => (
     <div>
-        <Dialog>
+        <Dialog content={<Editable text="To be editing" />}>
             <button>Click me</button>
         </Dialog>
     </div>
